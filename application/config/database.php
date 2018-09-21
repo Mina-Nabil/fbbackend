@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysqlcluster24.registeredsite.com',
+	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'iwHugXmJb87P',
 	'port' => '3306',
