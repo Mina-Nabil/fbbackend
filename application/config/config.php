@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://financialbrains.net/financialbrainsCP';
+$config['base_url'] = 'http://35.177.192.89/financialbrainsCP';
 
 /*
 |--------------------------------------------------------------------------
