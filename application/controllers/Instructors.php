@@ -90,6 +90,7 @@ class Instructors extends CI_Controller{
 
       $config['upload_path']          = FCPATH . "uploads/instructors/";
       $config['allowed_types'] = 'gif|jpg|png|jpeg';
+
       $this->upload->initialize($config);
 
       if ( ! $this->upload->do_upload('instructorIMG')){

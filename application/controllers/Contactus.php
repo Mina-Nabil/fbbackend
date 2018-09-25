@@ -48,6 +48,7 @@ class Contactus extends CI_Controller{
     $data['CNTC_ABTUS']  = $ContactusItem[0]['CNTC_ABTUS'];
     $data['CNTC_ADRS']  = $ContactusItem[0]['CNTC_ADRS'];
     $data['CNTC_LNDL']  = $ContactusItem[0]['CNTC_LNDL'];
+
     $data['CNTC_ID']      = $ContactusItem[0]['CNTC_ID'];
 
     $data['formURL']      = 'Contactus/edit';
@@ -74,12 +75,14 @@ class Contactus extends CI_Controller{
     $ContactusArbcAbtUs = $this->input->post('contactusArbcAboutUS');
     $ContactusFrom = $this->input->post('contactusFROM');
     $ContactusTo = $this->input->post('contactusTO');
+
     $ContactusLand = $this->input->post('contactusLand');
     $ContactusAddress = $this->input->post('contactusAddress');
 
 
     $this->Contactus_model->editContactus(1, $ContactusFB, $ContactusMob, $ContactusEmail,
     $ContactusInsta, $ContactusHotline, $ContactusAbtUs, $ContactusArbcAbtUs,$ContactusFrom, $ContactusTo, $ContactusLand, $ContactusAddress);
+
     $this->home('', 'Edit Done');
 
     }

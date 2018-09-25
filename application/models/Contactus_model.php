@@ -12,13 +12,12 @@ class Contactus_model extends CI_Model{
   public function getContactus(){
 
     $strSQL = "SELECT CNTC_ID, CNTC_FB, CNTC_MOB, CNTC_EMAIL, CNTC_INSTA, CNTC_HOTLINE, CNTC_ABTUS, CNTC_ARBC_ABTUS, CNTC_FROM, CNTC_TO, CNTC_LNDL, CNTC_ADRS
+
               FROM contactus WHERE CNTC_ID = 1";
     $query = $this->db->query($strSQL);
     return $query->result_array();
 
   }
-
-
 
   public function editContactus($ID, $FB, $Mob, $Email, $Insta, $Hotline, $AboutUs, $ArbcAboutUs, $From, $To, $ContactusLand, $Address){
 
