@@ -21,6 +21,19 @@ class Blogs_model extends CI_Model{
 
   }
 
+  public function getBlog_byID($ID){
+
+    $strSQL = "SELECT BLOG_ID, BLOG_TITLE, BLOG_DESC, BLOG_IMGE
+                FROM blog
+                ORDER BY BLOG_ID DESC
+                LIMIT 20
+                WHERE BLOG_ID = ?
+                ";
+    $query = $this->db->query($strSQL, array($ID));
+    return $query->result_array();
+
+  }
+
 
 
   public function insertBlog($Title, $Desc, $Image){
