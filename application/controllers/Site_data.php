@@ -75,7 +75,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['bigIMG']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -97,7 +97,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['medIMG1']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -119,7 +119,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['medIMG2']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -141,7 +141,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['medIMG3']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -163,7 +163,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG1']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -185,7 +185,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG2']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -207,7 +207,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG3']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -229,7 +229,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG4']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -251,7 +251,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG5']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\";
+      $config['upload_path']          = FCPATH . "uploads/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -273,7 +273,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG6']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -295,7 +295,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG7']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -317,7 +317,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG8']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
@@ -339,7 +339,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG9']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\home\\";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 

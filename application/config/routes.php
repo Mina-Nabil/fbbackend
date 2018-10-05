@@ -140,5 +140,11 @@ $route['contactus'] = 'Contactus/home';
 $route['contactus/update'] = 'Contactus/update';
 $route['contactus/edit'] = 'Contactus/edit';
 
+//ContactUS ROUTES
+$route['slides'] = 'Slides/home';
+$route['slides/update'] = 'Slides/update';
+$route['slides/edit'] = 'Slides/edit';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

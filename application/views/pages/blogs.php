@@ -13,8 +13,8 @@
     <div class='tbl-header'>
 
     <tr>
-        <th>Instrutor Name</th>
-        <th>Blog Text</th>
+      <th>Blog Title</th>
+        <th>Blog Desc</th>
         <th></th>
         <th>Edit</th>
 	      <th>Delete</th>
@@ -24,8 +24,8 @@
     <div class='tbl-content'>
   <?foreach($ArrBlogs as $blog){?>
   <tr>
-    <td><?=$blog['INST_NAME']?></td>
-    <td><p><?=$blog['BLOG_TEXT']?></p></td>
+    <td><?=$blog['BLOG_TITLE']?></td>
+    <td><p><?=$blog['BLOG_DESC']?></p></td>
     <td></td>
     <td><a href='<?=base_url() . 'blogs/update/' . $blog['BLOG_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'blogs/delete/' . $blog['BLOG_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>

@@ -134,4 +134,4 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array('Master_model', 'Courses_model', 'Exams_model', 'Benefits_model', 'Topics_model',
                             'Candidates_model', 'Instructors_model', 'Teachings_model', 'Blogs_model', 'Users_model'
-                          , 'Contactus_model', 'Sitedata_model');
+                          , 'Contactus_model', 'Sitedata_model', 'Slides_model');

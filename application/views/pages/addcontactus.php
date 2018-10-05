@@ -12,11 +12,9 @@
     <label>Facebook ID</label>
       <input placeholder="Facebook Page ID" type="text"      name="contactusFB" value ="<?=$CNTC_FB?>" required>
       <input placeholder="Mobile Number" type="text" name="contactusMob" value ="<?=$CNTC_MOB?>" required>
-<<<<<<< HEAD
       <input placeholder="Landline Number" type="text" name="contactusLand" value ="<?=$CNTC_LNDL?>" required>
       <input placeholder="Address" type="address"  name="contactusAddress" value ="<?=$CNTC_ADRS?>" required>
-=======
->>>>>>> 83ecec3594f885759618785b9bd927fcd6bd64f4
+
       <input placeholder="Email Address" type="email"  name="contactusEmail" value ="<?=$CNTC_EMAIL?>" required>
       <label>Working Hours From</label>
       <input placeholder="Working Hours From" type="time"  name="contactusFROM" value ="<?=$CNTC_FROM?>" required>

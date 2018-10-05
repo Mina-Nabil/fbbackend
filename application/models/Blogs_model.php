@@ -11,51 +11,39 @@ class Blogs_model extends CI_Model{
 
   public function getBlogs(){
 
-    $strSQL = "SELECT BLOG_ID, BLOG_INST_ID, BLOG_TEXT, INST_NAME
-                FROM blogs, instructors WHERE BLOG_INST_ID = INST_ID";
+    $strSQL = "SELECT BLOG_ID, BLOG_TITLE, BLOG_DESC, BLOG_IMGE
+                FROM blog
+                ORDER BY BLOG_ID DESC
+                LIMIT 20
+                ";
     $query = $this->db->query($strSQL);
     return $query->result_array();
 
   }
 
-  public function getBlog_byID($ID){
 
-    $strSQL = "SELECT BLOG_ID, BLOG_TEXT, BLOG_INST_ID, INST_NAME
-              FROM blogs, instructors  WHERE BLOG_INST_ID = INST_ID AND BLOG_ID = {$ID}";
-    $query = $this->db->query($strSQL);
-    return $query->result_array();
 
-  }
+  public function insertBlog($Title, $Desc, $Image){
 
-  public function getBlog_byInstructors($ID){
-
-    $strSQL = "SELECT BLOG_ID, BLOG_TEXT, BLOG_INST_ID, INST_NAME
-              FROM blogs, instructors  WHERE BLOG_INST_ID = INST_ID AND BLOG_INST_ID = {$ID}";
-    $query = $this->db->query($strSQL);
-    return $query->result_array();
+    $strSQL = "INSERT INTO `financial_brains`.`blog` (`BLOG_TITLE`, `BLOG_DESC`, `BLOG_IMGE` )
+               VALUES (?, ?, ?)";
+    $query = $this->db->query($strSQL, array($Title, $Desc, $Image));
 
   }
 
-  public function insertBlog($InstructorID, $Text){
+  public function editBlog($ID, $Title, $Desc, $Image){
 
-    $strSQL = "INSERT INTO `financial_brains`.`blogs` ( `BLOG_INST_ID`, `BLOG_TEXT` )
-               VALUES (\"{$Name}\", {$InstructorID}, \"{$Desc}\")";
-    $query = $this->db->query($strSQL);
-
-  }
-
-  public function editBlog($ID, $InstructorID, $Text){
-
-    $strSQL = "UPDATE `financial_brains`.`blogs`
-              SET `BLOG_TEXT`=\"{$Text}\",
-                  `BLOG_INST_ID`=\"{$InstructorID}\" WHERE
-                  `BLOG_ID`=\"{$ID}\"";
-    $query = $this->db->query($strSQL);
+    $strSQL = "UPDATE `financial_brains`.`blog`
+              SET `BLOG_TITLE`=? ,
+                  `BLOG_DESC`=? ,
+                  `BLOG_IMGE`=? WHERE
+                  `BLOG_ID`=? ";
+    $query = $this->db->query($strSQL, array($Title, $Desc, $Image, $ID));
 
   }
 
   public function deleteBlog($ID){
-    $strSQL = "DELETE FROM blogs WHERE BLOG_ID = {$ID}";
+    $strSQL = "DELETE FROM blog WHERE BLOG_ID = {$ID}";
     $query = $this->db->query($strSQL);
   }
 

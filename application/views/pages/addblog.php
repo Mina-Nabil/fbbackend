@@ -10,15 +10,16 @@
     <fieldset>
     <br>
 
-      <select name='blogInstructor'>
-      <?foreach($ArrInstructors as $instructor){?>
-      <option value="<?=$instructor['INST_ID']?>" <?if($BLOG_INST_ID == $instructor['INST_ID']) echo 'selected'?>>
-      <?=$instructor['INST_NAME']?>
-      </option>
-      <?}?>
-      </select>
+    <input value="<?=$BLOG_TITLE?>" type="text" name="blogTitle" id="contact-submit" required>
 
-      <textarea name="blogText" id="myTextarea" required></textarea>
+      <textarea name="blogDesc" value="<?=$BLOG_DESC?>" rows=5 ></textarea>
+
+      <label>Blog Image</label>
+      <?if($BLOG_IMGE != '') {?>
+        <center><img src=<?=base_url() ."uploads/blog/" . $BLOG_IMGE?> style="width:100px;height:200px;"></center>
+        <input hidden="true" type="text" value ="<?=$BLOG_IMGE?>" name='oldblogImge'>
+      <?}?>
+      <input type="file" name="blogImge" >
     <br><br>
       <input value="<?=$ButtonValue?>" type="submit" name="submit" id="contact-submit">
     <br><br>

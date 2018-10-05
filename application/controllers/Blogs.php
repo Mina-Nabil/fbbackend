@@ -42,8 +42,9 @@ class Blogs extends CI_Controller{
     $data['ArrInstructors'] = $this->Instructors_model->getInstructors();
 
     $data['BLOG_ID'] = '';
-    $data['BLOG_TEXT'] = '';
-    $data['BLOG_INST_ID'] = '';
+    $data['BLOG_DESC'] = '';
+    $data['BLOG_TITLE'] = '';
+    $data['BLOG_IMGE'] = '';
 
     $data['formURL'] = 'blogs/insert';
     $data['ButtonValue'] = 'Add Blog';
@@ -65,11 +66,11 @@ class Blogs extends CI_Controller{
       return;
     }
 
-    $data['ArrInstructors'] = $this->Instructors_model->getInstructors();
     $BlogItem = $this->Blogs_model->getBlog_byID($BlogID);
 
-    $data['BLOG_TEXT']    = $BlogItem[0]['BLOG_TEXT'];
-    $data['BLOG_INST_ID']  = $BlogItem[0]['BLOG_INST_ID'];
+    $data['BLOG_TITLE']    = $BlogItem[0]['BLOG_TITLE'];
+    $data['BLOG_DESC']  = $BlogItem[0]['BLOG_DESC'];
+    $data['BLOG_IMGE']  = $BlogItem[0]['BLOG_IMGE'];
     $data['BLOG_ID']      = $BlogItem[0]['BLOG_ID'];
 
     $data['formURL'] = 'blogs/edit/' . $BlogID;
@@ -85,20 +86,61 @@ class Blogs extends CI_Controller{
 
   public function edit($ID){
 
-      $blogText = $this->input->post('blogText');
-      $blogInstructor = $this->input->post('blogInstructor');
+      $blogTitle = $this->input->post('blogTitle');
+      $blogDesc = $this->input->post('blogDesc');
 
-      $this->Blogs_model->editBlog($ID, $blogInstructor, $blogText);
+
+          $blogImge = '';
+
+          if (!empty($_FILES['blogImge']['name'])) {
+
+            $config['upload_path']          = FCPATH . "uploads/blog/";
+            $config['allowed_types'] = 'gif|jpg|png';
+            $this->upload->initialize($config);
+
+            if ( ! $this->upload->do_upload('blogImge')){
+              $error = $this->upload->display_errors();
+              $this->update(  'Invalid File' . $error);
+            } else {
+                $imgData = $this->upload->data();
+                $blogImge = $imgData['file_name'];
+            }
+
+          } else {
+              $blogImge = $this->input->post('oldblogImge');
+          }
+
+      $this->Blogs_model->editBlog($blogTitle, $blogDesc, $blogImge, $ID);
       $this->home('', 'Edit Done');
     }
 
 
   public function insert(){
 
-    $blogText = $this->input->post('blogText');
-    $blogInstructor = $this->input->post('blogInstructor');
+    $blogImge = '';
 
-    $this->Blogs_model->insertBlog($blogInstructor, $blogText);
+    if (!empty($_FILES['blogImge']['name'])) {
+
+      $config['upload_path']          = FCPATH . "uploads/blog/";
+      $config['allowed_types'] = 'gif|jpg|png';
+      $this->upload->initialize($config);
+
+      if ( ! $this->upload->do_upload('blogImge')){
+        $error = $this->upload->display_errors();
+        $this->update(  'Invalid File' . $error);
+      } else {
+          $imgData = $this->upload->data();
+          $blogImge = $imgData['file_name'];
+      }
+
+    } else {
+        $blogImge = $this->input->post('oldblogImge');
+    }
+
+    $blogTitle = $this->input->post('blogTitle');
+    $blogDesc = $this->input->post('blogDesc');
+
+    $this->Blogs_model->insertBlog($blogTitle, $blogDesc ,$blogImge );
     $this->home('', 'Insert Done');
 
   }
