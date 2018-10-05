@@ -11,11 +11,11 @@
     <br>
 
       <select name='benefitCourse'>
-      <?foreach($ArrCourses as $course){?>
-      <option value="<?=$course['CRS_ID']?>" <?if($BNFT_CRS_ID == $course['CRS_ID']) echo 'selected'?>>
+      <?php foreach($ArrCourses as $course){?>
+      <option value="<?=$course['CRS_ID']?>" <?php if($BNFT_CRS_ID == $course['CRS_ID']) echo 'selected'?>>
       <?=$course['CRS_NAME']?>
       </option>
-      <?}?>
+      <?php }?>
       </select>
       <input placeholder="Benefit Name" type="text" name="benefitName" value ="<?=$BNFT_NAME?>" >
 

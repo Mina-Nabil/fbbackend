@@ -25,7 +25,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrContactus as $contactus){?>
+  <?php foreach($ArrContactus as $contactus){?>
   <tr>
     <td><?=$contactus['CNTC_FB']?></td>
     <td><?=$contactus['CNTC_MOB']?></td>
@@ -36,7 +36,7 @@
     <td><span class='limited'><?=$contactus['CNTC_ARBC_ABTUS']?></span></td>
     <td><a href='<?=base_url() . 'contactus/update'?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   </table>
  <label><?=$MSGOK?></label>
  <label><?=$MSGErr?></label>

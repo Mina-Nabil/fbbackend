@@ -22,7 +22,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrBenefits as $benefit){?>
+  <?php foreach($ArrBenefits as $benefit){?>
   <tr>
     <td><p><?=$benefit['BNFT_NAME']?></p></td>
     <td><p><?=$benefit['CRS_NAME']?></p></td>
@@ -30,7 +30,7 @@
     <td><a href='<?=base_url() . 'benefits/update/' . $benefit['BNFT_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'benefits/delete/' . $benefit['BNFT_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   <tr>
     <td></td><td></td>
     <td>

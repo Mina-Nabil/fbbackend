@@ -27,7 +27,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrCourses as $course){?>
+  <?php foreach($ArrCourses as $course){?>
   <tr>
     <td><p><?=$course['CRS_NAME']?></p></td>
     <td><p><?=$course['CRS_BRIEF']?></p></td>
@@ -40,7 +40,7 @@
     <td><a href='<?=base_url() . 'courses/update/' . $course['CRS_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'courses/delete/' . $course['CRS_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   <tr>
     <td></td><td></td><td></td><td></td>
     <td>

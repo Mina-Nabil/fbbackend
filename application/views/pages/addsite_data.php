@@ -15,86 +15,86 @@
       <input placeholder="Course Count" type="text"  name="site_dataNOofCourses" value ="<?=$STDT_CRSNO?>" required>
 
       <label>Large Home Image</label>
-      <?if($STDT_HOME_BIGIMG != '') {?>
+      <?php if($STDT_HOME_BIGIMG != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_BIGIMG?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_BIGIMG?>" name='bigOldIMG'>
-      <?}?>
+      <?php }?>
       <input type="file" name="bigIMG" >
 
       <label>Medium Home Images</label>
-      <?if($STDT_HOME_MEDIMG1 != '') {?>
+      <?php if($STDT_HOME_MEDIMG1 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_MEDIMG1?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_MEDIMG1?>" name='medOldIMG1'>
-      <?}?>
+      <?php } ?>
       <input type="file" name="medIMG1" >
 
-      <?if($STDT_HOME_MEDIMG2 != '') {?>
+      <?php if($STDT_HOME_MEDIMG2 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_MEDIMG2?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_MEDIMG2?>" name='medOldIMG2'>
-      <?}?>
+      <?php }?>
       <input type="file" name="medIMG2" >
 
-      <?if($STDT_HOME_MEDIMG3 != '') {?>
+      <?php if($STDT_HOME_MEDIMG3 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_MEDIMG3?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_MEDIMG3?>" name='medOldIMG3'>
-      <?}?>
+      <?php }?>
       <input type="file" name="medIMG3" >
 
       <label>Small Home Images</label>
 
 
-      <?if($STDT_HOME_SMLIMG1 != '') {?>
+      <?php if($STDT_HOME_SMLIMG1 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG1?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG1?>" name='smlOldIMG1'>
-      <?}?>
+      <?php }?>
       <input type="file" name="smlIMG1" >
 
-      <?if($STDT_HOME_SMLIMG2 != '') {?>
+      <?php if($STDT_HOME_SMLIMG2 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG2?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG2?>" name='smlOldIMG2'>
-      <?}?>
+      <?php }?>
       <input type="file" name="smlIMG2" >
 
-      <?if($STDT_HOME_SMLIMG3 != '') {?>
+      <?php if($STDT_HOME_SMLIMG3 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG3?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG3?>" name='smlOldIMG3'>
-      <?}?>
+      <?php }?>
       <input type="file" name="smlIMG3" >
 
-      <?if($STDT_HOME_SMLIMG4 != '') {?>
+      <?php if($STDT_HOME_SMLIMG4 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG4?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG4?>" name='smlOldIMG4'>
-      <?}?>
+      <?php }?>
       <input type="file" name="smlIMG4" >
 
-      <?if($STDT_HOME_SMLIMG5 != '') {?>
+      <?php if($STDT_HOME_SMLIMG5 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG5?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG5?>" name='smlOldIMG5'>
-      <?}?>
+      <?php }?>
       <input type="file" name="smlIMG5" >
 
-      <?if($STDT_HOME_SMLIMG6 != '') {?>
+      <?php if($STDT_HOME_SMLIMG6 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG6?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG6?>" name='smlOldIMG6'>
-      <?}?>
+      <?php } ?>
       <input type="file" name="smlIMG6" >
 
-      <?if($STDT_HOME_SMLIMG7 != '') {?>
+      <?php if($STDT_HOME_SMLIMG7 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG7?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG7?>" name='smlOldIMG7'>
-      <?}?>
+      <?php } ?>
       <input type="file" name="smlIMG7" >
 
-      <?if($STDT_HOME_SMLIMG8 != '') {?>
+      <?php if($STDT_HOME_SMLIMG8 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG8?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG8?>" name='smlOldIMG8'>
-      <?}?>
+      <?php } ?>
       <input type="file" name="smlIMG8" >
 
-      <?if($STDT_HOME_SMLIMG9 != '') {?>
+      <?php if($STDT_HOME_SMLIMG9 != '') {?>
         <center><img src=<?=base_url() ."uploads/home/" . $STDT_HOME_SMLIMG9?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$STDT_HOME_SMLIMG9?>" name='smlOldIMG9'>
-      <?}?>
+      <?php } ?>
       <input type="file" name="smlIMG9" >
 
     <br><br>

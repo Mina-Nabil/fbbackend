@@ -22,7 +22,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrUsers as $user){?>
+  <?php foreach($ArrUsers as $user){?>
   <tr>
     <td><?=$user['USR_NAME']?></td>
     <td><?=$user['USR_PASS']?></td>
@@ -30,7 +30,7 @@
     <td><a href='<?=base_url() . 'users/update/' . $user['USR_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'users/delete/' . $user['USR_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   <tr>
     <td></td><td></td>
 

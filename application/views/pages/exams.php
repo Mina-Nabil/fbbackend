@@ -22,7 +22,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrExams as $exam){?>
+  <?php foreach($ArrExams as $exam){?>
   <tr>
     <td><p><?=$exam['EXAM_NAME']?></p></td>
     <td><?=$exam['CRS_NAME']?></td>
@@ -30,7 +30,7 @@
     <td><a href='<?=base_url() . 'exams/update/' . $exam['EXAM_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'exams/delete/' . $exam['EXAM_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   <tr>
     <td></td><td></td>
     <td>

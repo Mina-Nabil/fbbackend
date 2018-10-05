@@ -22,7 +22,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrInstructors as $instructor){?>
+  <?php foreach($ArrInstructors as $instructor){?>
   <tr>
     <td><?=$instructor['INST_NAME']?></td>
     <td><p><?=$instructor['INST_DESC']?></p></td>
@@ -30,7 +30,7 @@
     <td><a href='<?=base_url() . 'instructors/update/' . $instructor['INST_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'instructors/delete/' . $instructor['INST_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   <tr>
     <td></td><td></td>
     <td>

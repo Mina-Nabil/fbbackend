@@ -16,10 +16,10 @@
       <textarea placeholder="CourseBrief" rows="10" cols="10"  name="courseBrief" required><?=$CRS_BRIEF?></textarea>
       <textarea placeholder="CourseOverview" rows="10" cols="10"  name="courseOverview" required><?=$CRS_OVERVIEW?></textarea>
       <label>Course Image</label>
-      <?if($CRS_IMG != '') {?>
+      <?php if($CRS_IMG != '') {?>
         <center><img src=<?=base_url() ."uploads/courses/" . $CRS_IMG?> style="width:100px;height:100px;"></center>
         <input hidden="true" type="text" value ="<?=$CRS_IMG?>" name='courseOldIMG'>
-      <?}?>
+      <?php }?>
       <input type="file" name="courseIMG" >
     <br><br>
       <input value="<?=$ButtonValue?>" type="submit" name="submit" id="contact-submit">

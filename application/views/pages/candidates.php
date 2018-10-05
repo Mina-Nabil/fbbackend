@@ -22,7 +22,7 @@
 
     </div>
     <div class='tbl-content'>
-  <?foreach($ArrCandidates as $candidate){?>
+  <?php foreach($ArrCandidates as $candidate){?>
   <tr>
     <td><?=$candidate['CNDT_NAME']?></td>
     <td><?=$candidate['CRS_NAME']?></td>
@@ -30,7 +30,7 @@
     <td><a href='<?=base_url() . 'candidates/update/' . $candidate['CNDT_ID']?>'><img src=<?=base_url() . 'img/edit.png'?> style='width:30px;height:30px;'></a></td>
     <td><a href='<?=base_url() . 'candidates/delete/' . $candidate['CNDT_ID']?>'><img src=<?=base_url() . 'img/del.png'?> style='width:30px;height:30px;'></a></td>
   </tr>
-  <?}?>
+  <?php }?>
   <tr>
     <td></td><td></td>
     <td>

@@ -14,10 +14,10 @@
 
       <textarea placeholder="Instructor Description" rows="10" cols="10"  name="instructorDesc" required><?=$INST_DESC?></textarea>
       <label>Instructor Image</label>
-      <?if($INST_IMG != '') {?>
+      <?php if($INST_IMG != '') {?>
         <center><img src=<?=base_url() ."uploads/instructors/" . $INST_IMG?> style="width:100px;height:200px;"></center>
         <input hidden="true" type="text" value ="<?=$INST_IMG?>" name='instructorOldIMG'>
-      <?}?>
+      <?php }?>
       <input type="file" name="instructorIMG" >
     <br><br>
       <input value="<?=$ButtonValue?>" type="submit" name="submit" id="contact-submit">

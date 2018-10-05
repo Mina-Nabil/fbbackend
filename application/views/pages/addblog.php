@@ -15,10 +15,10 @@
       <textarea name="blogDesc" value="<?=$BLOG_DESC?>" rows=5 ></textarea>
 
       <label>Blog Image</label>
-      <?if($BLOG_IMGE != '') {?>
+      <?php if($BLOG_IMGE != '') { ?>
         <center><img src=<?=base_url() ."uploads/blog/" . $BLOG_IMGE?> style="width:100px;height:200px;"></center>
         <input hidden="true" type="text" value ="<?=$BLOG_IMGE?>" name='oldblogImge'>
-      <?}?>
+      <?php }?>
       <input type="file" name="blogImge" >
     <br><br>
       <input value="<?=$ButtonValue?>" type="submit" name="submit" id="contact-submit">

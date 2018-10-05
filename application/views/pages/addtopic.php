@@ -11,11 +11,11 @@
     <br>
 
       <select name='topicCourse'>
-      <?foreach($ArrCourses as $course){?>
+      <?php foreach($ArrCourses as $course){?>
       <option value="<?=$course['CRS_ID']?>" <?if($TOPC_CRS_ID == $course['CRS_ID']) echo 'selected'?>>
       <?=$course['CRS_NAME']?>
       </option>
-      <?}?>
+      <?php } ?>
       </select>
       <input placeholder="Topic Name" type="text" name="topicName" value ="<?=$TOPC_NAME?>" required>
 

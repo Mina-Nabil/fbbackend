@@ -11,11 +11,11 @@
     <br>
 
       <select name='examCourse'>
-      <?foreach($ArrCourses as $course){?>
-      <option value="<?=$course['CRS_ID']?>" <?if($EXAM_CRS_ID == $course['CRS_ID']) echo 'selected'?>>
+      <?php foreach($ArrCourses as $course){?>
+      <option value="<?=$course['CRS_ID']?>" <?php if($EXAM_CRS_ID == $course['CRS_ID']) echo 'selected'?>>
       <?=$course['CRS_NAME']?>
       </option>
-      <?}?>
+      <?php }?>
       </select>width:200px;height:100px;
       <input placeholder="Exam Name" type="text" name="examName" value ="<?=$EXAM_NAME?>" required>
 
