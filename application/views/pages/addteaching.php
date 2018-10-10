@@ -12,7 +12,7 @@
 
       <select name='teachingInst'>
       <?php foreach($ArrInstructors as $instructor){?>
-      <option value="<?=$instructor['INST_ID']?>" <?php if($TECH_CRS_ID == $instructor['INST_ID']) echo 'selected'?>>
+      <option value="<?=$instructor['INST_ID']?>" <?php if($TECH_INST_ID == $instructor['INST_ID']) echo 'selected'?>>
       <?=$instructor['INST_NAME']?>
       </option>
       <?php } ?>
