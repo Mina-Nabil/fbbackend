@@ -72,7 +72,7 @@ class Teachings extends CI_Controller{
 
 
     $data['TECH_CRS_ID']  = $TeachingItem[0]['TECH_CRS_ID'];
-    $data['TECH_INST_ID']    = $TeachingItem[0]['TECH_DESC'];
+    $data['TECH_INST_ID']    = $TeachingItem[0]['TECH_INST_ID'];
     $data['TECH_ID']      = $TeachingItem[0]['TECH_ID'];
 
     $data['formURL'] = 'teachings/edit/' . $TeachingID;
