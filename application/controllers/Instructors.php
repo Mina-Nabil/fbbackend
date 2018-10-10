@@ -119,7 +119,7 @@ class Instructors extends CI_Controller{
 
     if (!empty($_FILES['instructorIMG']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads\\instructors\\";
+      $config['upload_path']          = FCPATH . "uploads/instructors/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 

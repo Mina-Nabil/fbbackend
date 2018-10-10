@@ -251,7 +251,7 @@ class Site_data extends CI_Controller{
 
     if (!empty($_FILES['smlIMG5']['name'])) {
 
-      $config['upload_path']          = FCPATH . "uploads/";
+      $config['upload_path']          = FCPATH . "uploads/home/";
       $config['allowed_types'] = 'gif|jpg|png';
       $this->upload->initialize($config);
 
