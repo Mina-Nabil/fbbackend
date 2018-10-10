@@ -59,7 +59,7 @@ class Master_model extends CI_Model{
         'Link' => 'site_data',
         'Name' => 'Site Data'
       );
-      $tmp[11] = array(
+      $tmp[12] = array(
         'Link' => 'slides',
         'Name' => 'Slides'
       );
