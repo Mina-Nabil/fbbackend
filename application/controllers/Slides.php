@@ -48,6 +48,7 @@ class Slides extends CI_Controller{
           $imgData = $this->upload->data();
           $SlidesIMG1 = $imgData['file_name'];
           $oldImage = $this->input->post('oldslideIMG1');
+          if(isset($oldImage))
           unlink( FCPATH . "../financialbrains/images/".$oldImage);
       }
 
@@ -71,6 +72,7 @@ class Slides extends CI_Controller{
           $imgData = $this->upload->data();
           $SlidesIMG2 = $imgData['file_name'];
           $oldImage = $this->input->post('oldslideIMG2');
+            if(isset($oldImage))
           unlink(FCPATH . "../financialbrains/images/".$oldImage);
       }
 
