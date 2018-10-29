@@ -25,8 +25,6 @@ class Blogs_model extends CI_Model{
 
     $strSQL = "SELECT BLOG_ID, BLOG_TITLE, BLOG_DESC, BLOG_IMGE
                 FROM blog
-                ORDER BY BLOG_ID DESC
-                LIMIT 20
                 WHERE BLOG_ID = ?
                 ";
     $query = $this->db->query($strSQL, array($ID));
@@ -47,10 +45,10 @@ class Blogs_model extends CI_Model{
   public function editBlog($ID, $Title, $Desc, $Image){
 
     $strSQL = "UPDATE `financial_brains`.`blog`
-              SET `BLOG_TITLE`=? ,
-                  `BLOG_DESC`=? ,
-                  `BLOG_IMGE`=? WHERE
-                  `BLOG_ID`=? ";
+              SET `BLOG_TITLE`= ? ,
+                  `BLOG_DESC`= ? ,
+                  `BLOG_IMGE`= ? WHERE
+                  `BLOG_ID`= ? ";
     $query = $this->db->query($strSQL, array($Title, $Desc, $Image, $ID));
 
   }
