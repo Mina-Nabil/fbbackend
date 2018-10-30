@@ -43,9 +43,9 @@
     </div>
           <div class="collapse navbar-collapse topnav" id="myNavbar">
             <ul class="nav navbar-nav">
-              <?foreach ($url as $ArrURL) {?>
+              <?php foreach ($ArrURL as $url) {?>
                 <li><a href="<?=base_url() . $url['Link']?>"><?=$url['Name']?></a></li>
-              <?}?>
+              <?php }?>
             </ul>
           </div>
         </nav>
