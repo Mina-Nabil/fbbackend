@@ -1,7 +1,7 @@
 <div class="container">
   <form id="contact">
     <br>
-    <h3>Farfalla Control Panel</h3>
+    <h3>Financial brains Control Panel</h3>
    <br>
     <center><img src=<?=base_url() . "img/vc_logo.jpg"?> style="width:200px;height:100px;"></center>
     <br>
