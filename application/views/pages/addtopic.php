@@ -12,7 +12,7 @@
 
       <select name='topicCourse'>
       <?php foreach($ArrCourses as $course){?>
-      <option value="<?=$course['CRS_ID']?>" <?if($TOPC_CRS_ID == $course['CRS_ID']) echo 'selected'?>>
+      <option value="<?=$course['CRS_ID']?>" <?php if($TOPC_CRS_ID == $course['CRS_ID']) echo 'selected'?> >
       <?=$course['CRS_NAME']?>
       </option>
       <?php } ?>

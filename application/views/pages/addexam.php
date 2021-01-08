@@ -16,7 +16,7 @@
       <?=$course['CRS_NAME']?>
       </option>
       <?php }?>
-      </select>width:200px;height:100px;
+      </select>
       <input placeholder="Exam Name" type="text" name="examName" value ="<?=$EXAM_NAME?>" required>
 
       <textarea placeholder="Exam Description" rows="10" cols="10"  name="examDesc" required><?=$EXAM_DESC?></textarea>
