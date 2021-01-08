@@ -131,7 +131,7 @@ class Courses extends CI_Controller{
 
       if ( ! $this->upload->do_upload('courseIMG')){
         $error = $this->upload->display_errors();
-        $this->update(   'Invalid File' . $error );
+        $this->add(   'Invalid File' . $error );
       } else {
           $imgData = $this->upload->data();
           $courseIMG = $imgData['file_name'];
