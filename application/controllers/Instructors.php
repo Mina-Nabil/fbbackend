@@ -89,13 +89,13 @@ class Instructors extends CI_Controller{
     if (!empty($_FILES['instructorIMG']['name'])) {
 
       $config['upload_path']          = FCPATH . "uploads/instructors/";
-      $config['allowed_types'] = 'gif|jpg|png|jpeg';
+      $config['allowed_types'] = 'jpg|png|jpeg';
 
       $this->upload->initialize($config);
 
       if ( ! $this->upload->do_upload('instructorIMG')){
         $error = $this->upload->display_errors();
-        $this->update(   'Invalid File' . $error );
+        $this->update( $ID,  'Invalid File' . $error );
       } else {
           $imgData = $this->upload->data();
           $instructorIMG = $imgData['file_name'];
@@ -125,7 +125,7 @@ class Instructors extends CI_Controller{
 
       if ( ! $this->upload->do_upload('instructorIMG')){
         $error = $this->upload->display_errors();
-        $this->update(   'Invalid File' . $error );
+        $this->add(   'Invalid File' . $error );
       } else {
           $imgData = $this->upload->data();
           $instructorIMG = $imgData['file_name'];

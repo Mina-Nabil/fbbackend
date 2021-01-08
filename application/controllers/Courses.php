@@ -92,12 +92,12 @@ class Courses extends CI_Controller{
     if (!empty($_FILES['courseIMG']['name'])) {
 
       $config['upload_path']          = FCPATH . "uploads/courses/";
-      $config['allowed_types'] = 'gif|jpg|png';
+      $config['allowed_types'] = 'jpg|png|jpeg';
       $this->upload->initialize($config);
 
       if ( ! $this->upload->do_upload('courseIMG')){
         $error = $this->upload->display_errors();
-        $this->update(   'Invalid File' . $error );
+        $this->update($ID,  'Invalid File' . $error );
       } else {
           $imgData = $this->upload->data();
           $courseIMG = $imgData['file_name'];
@@ -126,7 +126,7 @@ class Courses extends CI_Controller{
     if (!empty($_FILES['courseIMG']['name'])) {
 
       $config['upload_path']          = FCPATH . "uploads/courses/";
-      $config['allowed_types'] = 'gif|jpg|png';
+      $config['allowed_types'] = 'jpeg|jpg|png';
       $this->upload->initialize($config);
 
       if ( ! $this->upload->do_upload('courseIMG')){
